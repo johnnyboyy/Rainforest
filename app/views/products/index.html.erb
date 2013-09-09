@@ -1,0 +1,10 @@
+<h1>Products</h1>
+
+<% @products.each do |p| %>
+	<%= p.name %>
+	<%= truncate p.description, length: 50 %>
+	<%= p.price_in_cents %><br />
+<% end %><br />
+
+
+<%= link_to 'New Product', new_product_path %>
