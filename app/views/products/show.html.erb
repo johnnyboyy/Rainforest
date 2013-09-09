@@ -1,6 +1,6 @@
 <h1><%= @product.name %></h1>
 <p><%= @product.description %></p>
-<span class="price"><%= @product.price_in_cents %></span>
+<span class="price"><%= @product.format_price %></span>
 <br />
 
 <%= link_to 'Back', :back %>

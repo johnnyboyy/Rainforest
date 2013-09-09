@@ -3,7 +3,7 @@
 <% @products.each do |p| %>
 	<%= p.name %>
 	<%= truncate p.description, length: 50 %>
-	<%= p.price_in_cents %>
+	<%= p.format_price %>
 	
 	<%= link_to 'show', p %><br />
 <% end %><br />
