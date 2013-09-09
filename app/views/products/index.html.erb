@@ -3,7 +3,9 @@
 <% @products.each do |p| %>
 	<%= p.name %>
 	<%= truncate p.description, length: 50 %>
-	<%= p.price_in_cents %><br />
+	<%= p.price_in_cents %>
+	
+	<%= link_to 'show', p %><br />
 <% end %><br />
 
 
