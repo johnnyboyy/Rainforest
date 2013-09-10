@@ -7,7 +7,6 @@ class ReviewsController < ApplicationController
 
   def create
   	@review = @product.reviews.build(review_params)
-  	@review.product_id = @product.id
   	@review.user_id = current_user.id
 
   	if @review.save
@@ -21,6 +20,7 @@ class ReviewsController < ApplicationController
   def destroy
   	@review = Review.find(params[:id])
   	@review.destroy
+    redirect_to @product
   end
 
 
