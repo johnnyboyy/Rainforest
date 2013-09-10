@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :ensure_logged_in, only: [:edit, :create, :show, :update, :destroy]
 	before_action :load_product
 
   def show
