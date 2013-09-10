@@ -11,6 +11,10 @@ class ProductsController < ApplicationController
   def show
   	@product = Product.find(params[:id])
 
+    if current_user
+      @review = @product.reviews.build
+    end
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @product }
@@ -67,6 +71,8 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
 
   def product_params
   	params.require(:product).permit(:name, :description, :price_in_cents)
