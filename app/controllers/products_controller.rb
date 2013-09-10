@@ -59,7 +59,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-  	@product = Produt.find(params[:id])
+  	@product = Product.find(params[:id])
   	@product.destroy
 
     respond_to do |format|
