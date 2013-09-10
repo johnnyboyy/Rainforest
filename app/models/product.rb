@@ -2,8 +2,9 @@ class Product < ActiveRecord::Base
 	has_many :reviews
 
 
-	validates :name, :description, presence: true,
-																uniqueness: true
+	validates :name, presence: true,
+									uniqueness: true
+	validates :description, presence: true
 	validates :price_in_cents, numericality: {only_integer: true}
 
 
