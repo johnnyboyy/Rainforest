@@ -33,7 +33,7 @@ ul.full_wrapper {
 		word-wrap: break-word;
 		border-radius: 5%;
 
-		h4{
+		h4 {
 			margin-left: 10px;
 
 		}
@@ -48,6 +48,10 @@ ul.full_wrapper {
 			margin: 10px 5px;
 			width: 280px;
 			height: 180px;
+		}
+
+		img:hover {
+			border: 1px solid #20AEDE;
 		}
 	}	
 }
@@ -70,4 +74,9 @@ ul.full_wrapper {
 	border-bottom: 2pt solid rgba(169, 205, 69, 0.5);
 	border-left: 1pt solid rgba(169, 205, 69, 0.5);
 	border-top: 1pt solid rgba(169, 205, 69, 0.5);
+}
+
+.description {
+		width: 300px;
+		word-wrap: break-word;
 }

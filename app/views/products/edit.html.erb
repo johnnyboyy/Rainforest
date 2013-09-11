@@ -1,2 +1,9 @@
-<h1>Products#edit</h1>
-<p>Find me in app/views/products/edit.html.erb</p>
+
+<%= link_to 'Back', product_path(@product) %><br />
+
+<h1>Edit Product</h1>
+
+<h2><%= @product.name %></h2>
+
+	<%= render 'form' %>
+
