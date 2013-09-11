@@ -1,12 +1,17 @@
+
+
 <h1>Products</h1>
-
+	<%= link_to 'New Product', new_product_path %>
+<ul class="full_wrapper">
 <% @products.each do |p| %>
-	<%= p.name %>
-	<%= truncate p.description, length: 50 %>
-	<%= p.format_price %>
-	
-	<%= link_to 'show', p %><br />
+	<li class="<%= cycle('list-line-odd', 'list-line-even') %>">
+		<h4><%= p.name %></h4>
+		<%= image_tag(p.image.url) %>
+	<p>
+		<strong>Description: </strong><%= truncate p.description, length: 60 %><br />
+	<strong>Price:</strong> <%= p.format_price %><br />
+
+	<%= link_to 'show', p %></p>
+	</li>
 <% end %><br />
-
-
-<%= link_to 'New Product', new_product_path %>
+</ul>

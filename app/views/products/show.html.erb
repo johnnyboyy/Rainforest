@@ -1,6 +1,8 @@
+
 <h1><%= @product.name %></h1>
+<%= image_tag(@product.image.url) %>
 <p><%= @product.description %></p>
-<span class="price"><%= @product.format_price %></span>
+<span class="price">Price: <%= @product.format_price %></span>
 <br />
 
 <% if current_user %>

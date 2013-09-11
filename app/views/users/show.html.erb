@@ -1,0 +1,13 @@
+
+
+<h1><%= current_user.email %></h1>
+
+<p>
+	<%= current_user.name %><br />
+</p>
+
+<h3>Edit Account </h3>
+
+<%= render 'user_form' %>
+
+<%= link_to 'Back', products_path %>

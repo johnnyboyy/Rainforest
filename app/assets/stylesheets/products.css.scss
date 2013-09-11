@@ -1,3 +1,73 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+div.nav-spacer {
+	margin-left: 10px;
+}
+
+
+#not-bootstrap-container {
+	max-width: 66%;
+	width: auto;
+	margin-top: 50px;
+	margin-left: 10%;
+}
+
+
+
+ul.full_wrapper {
+
+
+
+	li {
+		margin: 10px;
+		padding: 5px;
+		list-style: none;
+		width: 300px;
+		height: 360px;
+		float: left;
+		word-wrap: break-word;
+		border-radius: 5%;
+
+		h4{
+			margin-left: 10px;
+
+		}
+
+		p {
+			margin-left: 10px;
+			position: relative;
+			bottom: 2px;
+		}
+
+		img {
+			margin: 10px 5px;
+			width: 280px;
+			height: 180px;
+		}
+	}	
+}
+
+#error_explanation {
+	background-color: #FF3E36
+}
+
+.list-line-even {
+	background: rgba(169, 205, 69, 1);
+	border-right: 3pt solid rgba(237, 237, 62, 0.5);
+	border-bottom: 2pt solid rgba(237, 237, 62, 0.5);
+	border-left: 1pt solid rgba(237, 237, 62, 0.5);
+	border-top: 1pt solid rgba(237, 237, 62, 0.5);
+}
+
+.list-line-odd {
+	background: rgba(237, 237, 62, 1);
+	border-right: 3pt solid rgba(169, 205, 69, 0.5);
+	border-bottom: 2pt solid rgba(169, 205, 69, 0.5);
+	border-left: 1pt solid rgba(169, 205, 69, 0.5);
+	border-top: 1pt solid rgba(169, 205, 69, 0.5);
+}

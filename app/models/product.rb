@@ -7,6 +7,8 @@ class Product < ActiveRecord::Base
 	validates :description, presence: true
 	validates :price_in_cents, numericality: {only_integer: true}
 
+	has_attached_file :image, default_url: "/images/missing.jpg"
+
 
 	def format_price
 		if price_in_cents < 10

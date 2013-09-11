@@ -5,7 +5,7 @@ Rainforest::Application.routes.draw do
   resources :products do
     resources :reviews, except: [:index]
   end
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :show, :update]
   resources :sessions, only: [:new, :create, :destroy]
 
 

@@ -13,18 +13,23 @@
 
 
 	<div class="field">
-	 	<%= f.label :name %></div><br />
+	 	<%= f.label :name %><br />
 	 	<%= f.text_field :name %>
 	</div>
 
 	<div class="field">
-	 	<%= f.label :description %></div><br />
+	 	<%= f.label :description %><br />
 	 	<%= f.text_area :description %>
 	</div>
 
 	<div class="field">
-	 	<%= f.label :price_in_cents %></div><br />
+	 	<%= f.label :price_in_cents %><br />
 	 	<%= f.number_field :price_in_cents %>
+	</div>
+
+	<div class="field">
+		<%= f.label :image %>
+		<%= f.file_field :image %>
 	</div>
 	
 	<div class="actions">

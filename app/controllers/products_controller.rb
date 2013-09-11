@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :ensure_logged_in, only: [:show]
+  before_action :ensure_logged_in, only: [:new, :edit, :update]
   def index
   	@products = Product.all
 
@@ -76,6 +76,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-  	params.require(:product).permit(:name, :description, :price_in_cents)
+  	params.require(:product).permit(:name, :description, :price_in_cents, :image)
   end
 end
