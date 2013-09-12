@@ -20,8 +20,12 @@ class ReviewsController < ApplicationController
 
   def destroy
   	@review = Review.find(params[:id])
-  	@review.destroy
-    redirect_to @product
+    if current_user.id == @review.user_id
+    	@review.destroy
+      redirect_to @product
+    else
+      redirect_to @product, alert: "You can only remove your own reviews!"
+    end
   end
 
 
