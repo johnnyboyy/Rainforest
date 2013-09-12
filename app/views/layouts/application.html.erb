@@ -9,6 +9,7 @@
 <body>
 
 
+
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="nav-spacer">
@@ -26,25 +27,22 @@
         <% else %>
           <li> <%= link_to "Log in", new_session_path %> </li>
           <li> <%= link_to "Sign up", new_user_path %> </li>
-        <% end %> 
+        <% end %>
         </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
-</div>
 
-
-<div id="not-bootstrap-container">
-
-	<% if flash[:notice] %>
-		<p id="notice"><%= flash[:notice] %></p>
-	<% end %>
-
-	<% if flash[:alert] %>
-		<p id="alert"><%= flash[:alert] %></p>
-	<% end %>
+        <ul class="right_side"> 
 
 	<%= yield %>
+
+<ul class="message_container">
+  <% if flash[:notice] %>
+    <li class="alert alert-success"><%= flash[:notice] %></li>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <li class="alert alert-error"><%= flash[:alert] %></li>
+  <% end %>
+</ul>
 
 </div>
 

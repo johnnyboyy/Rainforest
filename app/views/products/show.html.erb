@@ -1,31 +1,48 @@
 
-<h1><%= @product.name %></h1>
-<%= image_tag(@product.image.url) %>
-<%= link_to 'Back', products_path %>
-<%= link_to 'Edit', edit_product_path %>
-<%= link_to 'Delete', @product, method: :delete, data: { confirm: 'Are you sure?' } %><br />
-
-<p class="description"><%= @product.description %></p>
-	<span class="price">Price: <%= @product.format_price %></span>
-<br />
-
-<% if current_user %>
-
-  <h3>Reviews</h3>
-  <% if @product.reviews.length > 0 %>
-    <%= render @product.reviews %>
-  <% end %>
+	<li class="custom_nav_button"><%= link_to 'Back', products_path, class: 'btn btn-danger' %></li>
+	<li class="custom_nav_button"><%= link_to 'Edit', edit_product_path, class: 'btn btn-warning' %></li>
+	<li class="custom_nav_button"><%= link_to 'Delete', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-inverse' %></li>
 
 
+	        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
 
-	<h4>New Review</h4>
 
-  <%= render 'reviews/new_review.html.erb' %>
+<div id="not-bootstrap-container">
 
+<div class="custom_inner_wrapper">
 
-<% else %>
-  <p>Please <%= link_to "log in", new_session_path %> to add a review.</p>
-<% end %>
+	<h1><%= @product.name %></h1>
+
+	<%= image_tag(@product.image.url) %>
 
 
 
+
+	<p class="description"><%= @product.description %></p>
+		<span class="price">Price: <%= @product.format_price %></span>
+	<br />
+
+	<% if current_user %>
+
+	  <h3>Reviews</h3>
+	  <% if @product.reviews.length > 0 %>
+	    <%= render @product.reviews %>
+	  <% end %>
+
+
+
+		<h4>New Review</h4>
+
+	  <%= render 'reviews/new_review.html.erb' %>
+
+
+	<% else %>
+	  <p>Please <%= link_to "log in", new_session_path %> to add a review.</p>
+	<% end %>
+
+
+</div>

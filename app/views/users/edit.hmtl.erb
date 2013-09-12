@@ -1,6 +1,18 @@
 
-<%= link_to 'Back', products_path %><br />
+<li class="custom_nav_button"><%= link_to 'Back', products_path, class: 'btn btn-danger' %></li>
 
-<h1>Edit Account </h1>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
 
-<%= render 'users/_user_form' %>
+
+<div id="not-bootstrap-container">
+	<div class="custom_inner_wrapper">
+
+		<h1>Edit Account </h1>
+
+		<%= render 'users/_user_form' %>
+
+	</div>

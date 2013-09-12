@@ -1,9 +1,18 @@
 
-<%= link_to 'Back', product_path(@product) %><br />
+<li class="custom_nav_button"><%= link_to 'Back', product_path(@product), class: 'btn btn-danger' %></li>
 
-<h1>Edit Product</h1>
 
-<h2><%= @product.name %></h2>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+<div class="not-bootstrap-container">
+	<div class="custom_inner_wrapper">
+		<h1>Edit Product</h1>
 
-	<%= render 'form' %>
+		<h2><%= @product.name %></h2>
 
+		<%= render 'form' %>
+		</div>
+</div>

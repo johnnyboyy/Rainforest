@@ -1,14 +1,14 @@
 
-<% if review.id != nil %>
-	<p>
-	<%= review.comment %> <br>
+	<% if review.id != nil %>
+		<p class="review_container">
+		<%= review.comment %> <br>
 
-	  <% if review.user != nil %>
-	    <em> by <%= review.user.email %></em>
-	    Added on: <%= review.created_at %>
-	  <% end %>
+		  <% if review.user != nil %>
+		    <em> by <%= review.user.email %></em>
+		    Added on: <%= review.created_at %>
+		  <% end %>
 
-	  <%= button_to "Remove", [review.product, review], method: :delete %>
-	</p>
-<% end %>
+		  <%= button_to "Remove", [review.product, review], method: :delete %>
+		</p>
+	<% end %>
 

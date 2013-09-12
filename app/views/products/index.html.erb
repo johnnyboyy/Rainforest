@@ -1,17 +1,30 @@
+	        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
 
+<div class="index_title_and_create_circle">
+	<span></span>
+</div>
 
-<h1>Products</h1>
-	<%= link_to 'New Product', new_product_path %>
-<ul class="full_wrapper">
-<% @products.each do |p| %>
-	<li class="<%= cycle('list-line-odd', 'list-line-even') %>">
-		<h4><%= p.name %></h4>
-		<%= link_to image_tag(p.image.url), p %>
-	<p>
-		<strong>Description: </strong><%= truncate p.description, length: 60 %><br />
-	<strong>Price:</strong> <%= p.format_price %><br />
+<div class="index_actions">
+	<h1>Products</h1>
+	<%= link_to 'New Product', new_product_path, class: "btn" %>
+</div>
 
-	<%= link_to 'show', p %></p>
-	</li>
-<% end %><br />
-</ul>
+<div id="not-bootstrap-container">
+
+	<ul class="full_wrapper">
+	<% @products.each do |p| %>
+		<li class="<%= cycle('list-line-odd', 'list-line-even') %>">
+			<h4><%= p.name %></h4>
+			<%= link_to image_tag(p.image.url), p %>
+		<p>
+			<strong>Description: </strong><%= truncate p.description, length: 60 %><br />
+		<strong>Price: </strong><%= p.format_price %><br />
+
+		<%= link_to 'show', p, class: 'btn btn-info' %></p>
+		</li>
+	<% end %><br />
+	</ul>
